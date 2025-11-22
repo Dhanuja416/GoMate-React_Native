@@ -135,7 +135,7 @@ For testing the authentication flow:
 - **Username:** `emilys`
 - **Password:** `emilyspass`
 
-## 📂 Project Structure
+<!-- ## 📂 Project Structure
 
 ```
 GoMateApp/
@@ -167,7 +167,7 @@ GoMateApp/
 ├── App.js                  # Root component
 ├── package.json
 └── README.md
-```
+``` -->
 
 ## 🎨 Design Features
 
@@ -193,7 +193,7 @@ GoMateApp/
 ### Destinations
 - `GET https://restcountries.com/v3.1/name/{country}` - Fetch country data
 
-## 📸 Screenshots
+<!-- ## 📸 Screenshots
 
 *Screenshots will be added here showing:*
 - Login Screen
@@ -201,13 +201,13 @@ GoMateApp/
 - Destination Details
 - Favorites Screen
 - Profile Screen
-- Dark Mode
+- Dark Mode -->
 
-## 🎥 Demo Video
+<!-- ## 🎥 Demo Video
 
-*A demo video (≤2 minutes) showcasing the app's core functionality will be available here.*
+*A demo video (≤2 minutes) showcasing the app's core functionality will be available here.* -->
 
-## ✅ Assignment Requirements Checklist
+<!-- ## ✅ Assignment Requirements Checklist
 
 - ✅ User authentication with registration and login
 - ✅ Form validation using Yup
@@ -217,8 +217,8 @@ GoMateApp/
 - ✅ Favorites with persistence
 - ✅ Consistent styling with Feather Icons
 - ✅ Responsive design
-- ✅ **Bonus:** Dark mode implementation
-
+- ✅ **Bonus:** Dark mode implementation -->
+<!-- 
 ## 🚀 Future Enhancements
 
 - [ ] Map integration for destinations
@@ -227,11 +227,11 @@ GoMateApp/
 - [ ] User reviews and ratings
 - [ ] Offline mode
 - [ ] Multi-language support
-- [ ] Push notifications
+- [ ] Push notifications -->
 
 ## 👨‍💻 Developer
 
-**Dhanuja** - Index Number: 224038
+**Dhanuja** - Index Number: 224038C
 
 ## 📄 License
 
