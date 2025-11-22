@@ -7,6 +7,7 @@ import {
   ScrollView,
   Alert,
   Switch,
+  Platform,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { Feather } from '@expo/vector-icons';
@@ -22,24 +23,32 @@ const ProfileScreen = ({ navigation }) => {
   const theme = isDark ? darkTheme : lightTheme;
 
   const handleLogout = () => {
-    Alert.alert(
-      'Logout',
-      'Are you sure you want to logout?',
-      [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
-        {
-          text: 'Logout',
-          style: 'destructive',
-          onPress: () => {
-            dispatch(logoutUser());
+    if (Platform.OS === 'web') {
+      // For web, use window.confirm
+      if (window.confirm('Are you sure you want to logout?')) {
+        dispatch(logoutUser());
+      }
+    } else {
+      // For mobile, use Alert
+      Alert.alert(
+        'Logout',
+        'Are you sure you want to logout?',
+        [
+          {
+            text: 'Cancel',
+            style: 'cancel',
           },
-        },
-      ],
-      { cancelable: true }
-    );
+          {
+            text: 'Logout',
+            style: 'destructive',
+            onPress: () => {
+              dispatch(logoutUser());
+            },
+          },
+        ],
+        { cancelable: true }
+      );
+    }
   };
 
   const handleThemeToggle = (value) => {
@@ -137,11 +146,15 @@ const ProfileScreen = ({ navigation }) => {
             title="Account Information"
             subtitle="View your account details"
             onPress={() => {
-              Alert.alert(
-                'Account Details',
-                `Username: ${user?.username || 'N/A'}\nEmail: ${user?.email || 'N/A'}\nName: ${user?.firstName || ''} ${user?.lastName || ''}`.trim(),
-                [{ text: 'OK' }]
-              );
+              if (Platform.OS === 'web') {
+                alert(`Account Details\n\nUsername: ${user?.username || 'N/A'}\nEmail: ${user?.email || 'N/A'}\nName: ${user?.firstName || ''} ${user?.lastName || ''}`.trim());
+              } else {
+                Alert.alert(
+                  'Account Details',
+                  `Username: ${user?.username || 'N/A'}\nEmail: ${user?.email || 'N/A'}\nName: ${user?.firstName || ''} ${user?.lastName || ''}`.trim(),
+                  [{ text: 'OK' }]
+                );
+              }
             }}
           />
         </View>
@@ -160,11 +173,15 @@ const ProfileScreen = ({ navigation }) => {
             title="GitHub Repository"
             subtitle="View source code"
             onPress={() => {
-              Alert.alert(
-                'GitHub Repository',
-                'https://github.com/Dhanuja416/GoMate-React_Native',
-                [{ text: 'OK' }]
-              );
+              if (Platform.OS === 'web') {
+                alert('GitHub Repository\n\nhttps://github.com/Dhanuja416/GoMate-React_Native');
+              } else {
+                Alert.alert(
+                  'GitHub Repository',
+                  'https://github.com/Dhanuja416/GoMate-React_Native',
+                  [{ text: 'OK' }]
+                );
+              }
             }}
           />
         </View>

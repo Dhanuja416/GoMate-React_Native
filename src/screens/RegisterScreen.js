@@ -83,35 +83,35 @@ const RegisterScreen = ({ navigation }) => {
         >
           {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
             <View style={styles.form}>
-              <View style={styles.row}>
-                <View style={[styles.inputContainer, styles.halfWidth]}>
-                  <Feather name="user" size={20} color={theme.textSecondary} style={styles.icon} />
-                  <TextInput
-                    style={[styles.input, { color: theme.text, borderColor: theme.border }]}
-                    placeholder="First Name"
-                    placeholderTextColor={theme.textSecondary}
-                    onChangeText={handleChange('firstName')}
-                    onBlur={handleBlur('firstName')}
-                    value={values.firstName}
-                  />
-                </View>
-                <View style={[styles.inputContainer, styles.halfWidth]}>
-                  <Feather name="user" size={20} color={theme.textSecondary} style={styles.icon} />
-                  <TextInput
-                    style={[styles.input, { color: theme.text, borderColor: theme.border }]}
-                    placeholder="Last Name"
-                    placeholderTextColor={theme.textSecondary}
-                    onChangeText={handleChange('lastName')}
-                    onBlur={handleBlur('lastName')}
-                    value={values.lastName}
-                  />
-                </View>
+              <View style={styles.inputContainer}>
+                <Feather name="user" size={20} color={theme.textSecondary} style={styles.icon} />
+                <TextInput
+                  style={[styles.input, { color: theme.text, borderColor: theme.border }]}
+                  placeholder="First Name"
+                  placeholderTextColor={theme.textSecondary}
+                  onChangeText={handleChange('firstName')}
+                  onBlur={handleBlur('firstName')}
+                  value={values.firstName}
+                />
               </View>
-              {(touched.firstName && errors.firstName) || (touched.lastName && errors.lastName) ? (
-                <Text style={styles.errorText}>
-                  {errors.firstName || errors.lastName}
-                </Text>
-              ) : null}
+              {touched.firstName && errors.firstName && (
+                <Text style={styles.errorText}>{errors.firstName}</Text>
+              )}
+
+              <View style={styles.inputContainer}>
+                <Feather name="user" size={20} color={theme.textSecondary} style={styles.icon} />
+                <TextInput
+                  style={[styles.input, { color: theme.text, borderColor: theme.border }]}
+                  placeholder="Last Name"
+                  placeholderTextColor={theme.textSecondary}
+                  onChangeText={handleChange('lastName')}
+                  onBlur={handleBlur('lastName')}
+                  value={values.lastName}
+                />
+              </View>
+              {touched.lastName && errors.lastName && (
+                <Text style={styles.errorText}>{errors.lastName}</Text>
+              )}
 
               <View style={styles.inputContainer}>
                 <Feather name="at-sign" size={20} color={theme.textSecondary} style={styles.icon} />
@@ -257,6 +257,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'flex-start',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -264,8 +265,13 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     position: 'relative',
   },
-  halfWidth: {
+  halfWidthLeft: {
     width: '48%',
+    marginRight: '2%',
+  },
+  halfWidthRight: {
+    width: '48%',
+    marginLeft: '2%',
   },
   icon: {
     position: 'absolute',
