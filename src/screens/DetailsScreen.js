@@ -32,7 +32,7 @@ const DetailsScreen = ({ route, navigation }) => {
     <View style={[styles.infoCard, { backgroundColor: theme.surface }]}>
       <Feather name={icon} size={24} color={theme.primary} />
       <Text style={[styles.infoLabel, { color: theme.textSecondary }]}>{label}</Text>
-      <Text style={[styles.infoValue, { color: theme.text }]} numberOfLines={2}>
+      <Text style={[styles.infoValue, { color: theme.text }]} numberOfLines={3} ellipsizeMode="tail">
         {value}
       </Text>
     </View>
@@ -238,23 +238,27 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     marginTop: 20,
+    gap: 10,
   },
   infoCard: {
-    width: (width - 60) / 2,
+    width: '48%',
+    minHeight: 120,
     padding: 15,
     borderRadius: 12,
     alignItems: 'center',
-    marginBottom: 15,
+    justifyContent: 'center',
   },
   infoLabel: {
     fontSize: 12,
     marginTop: 8,
+    textAlign: 'center',
   },
   infoValue: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '600',
     marginTop: 4,
     textAlign: 'center',
+    paddingHorizontal: 5,
   },
   transportContainer: {
     marginBottom: 20,

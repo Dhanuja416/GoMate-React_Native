@@ -134,11 +134,7 @@ const LoginScreen = ({ navigation }) => {
                 </TouchableOpacity>
               </View>
 
-              <View style={styles.demoInfo}>
-                <Text style={[styles.demoText, { color: theme.textSecondary }]}>
-                  Demo: username: "emilys" | password: "emilyspass"
-                </Text>
-              </View>
+              
             </View>
           )}
         </Formik>
