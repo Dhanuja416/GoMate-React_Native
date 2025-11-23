@@ -80,21 +80,7 @@ A modern, cross-platform mobile application built with React Native and Expo for
   - Favorite destinations
   - Theme preferences
 
-## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| React Native | Cross-platform mobile development |
-| Expo | Development framework & build tools |
-| Redux Toolkit | State management |
-| React Navigation | Navigation & routing |
-| Formik | Form management |
-| Yup | Form validation |
-| Axios | HTTP client |
-| AsyncStorage | Local data persistence |
-| Feather Icons | Iconography |
-
-## 📦 Installation
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -135,39 +121,7 @@ For testing the authentication flow:
 - **Username:** `emilys`
 - **Password:** `emilyspass`
 
-<!-- ## 📂 Project Structure
 
-```
-GoMateApp/
-├── src/
-│   ├── components/         # Reusable components (future)
-│   ├── navigation/
-│   │   └── AppNavigator.js # Navigation configuration
-│   ├── redux/
-│   │   ├── store.js        # Redux store configuration
-│   │   └── slices/
-│   │       ├── authSlice.js
-│   │       ├── transportSlice.js
-│   │       ├── favoritesSlice.js
-│   │       └── themeSlice.js
-│   ├── screens/
-│   │   ├── LoginScreen.js
-│   │   ├── RegisterScreen.js
-│   │   ├── HomeScreen.js
-│   │   ├── DetailsScreen.js
-│   │   ├── FavoritesScreen.js
-│   │   └── ProfileScreen.js
-│   ├── services/
-│   │   └── api.js          # API service layer
-│   ├── styles/
-│   │   └── theme.js        # Theme configuration
-│   └── utils/
-│       └── validation.js   # Validation schemas
-├── assets/                 # Images and static files
-├── App.js                  # Root component
-├── package.json
-└── README.md
-``` -->
 
 ## 🎨 Design Features
 
@@ -193,41 +147,7 @@ GoMateApp/
 ### Destinations
 - `GET https://restcountries.com/v3.1/name/{country}` - Fetch country data
 
-<!-- ## 📸 Screenshots
 
-*Screenshots will be added here showing:*
-- Login Screen
-- Home Screen with destinations
-- Destination Details
-- Favorites Screen
-- Profile Screen
-- Dark Mode -->
-
-<!-- ## 🎥 Demo Video
-
-*A demo video (≤2 minutes) showcasing the app's core functionality will be available here.* -->
-
-<!-- ## ✅ Assignment Requirements Checklist
-
-- ✅ User authentication with registration and login
-- ✅ Form validation using Yup
-- ✅ React Navigation (Stack & Bottom Tabs)
-- ✅ Dynamic item list from API
-- ✅ Redux Toolkit state management
-- ✅ Favorites with persistence
-- ✅ Consistent styling with Feather Icons
-- ✅ Responsive design
-- ✅ **Bonus:** Dark mode implementation -->
-<!-- 
-## 🚀 Future Enhancements
-
-- [ ] Map integration for destinations
-- [ ] Booking functionality
-- [ ] Social sharing features
-- [ ] User reviews and ratings
-- [ ] Offline mode
-- [ ] Multi-language support
-- [ ] Push notifications -->
 
 ## 👨‍💻 Developer
 
